@@ -87,4 +87,4 @@ A full-stack web application for browsing books, reading and writing reviews, an
 - `POST /api/reviews` - Create a new review
 
 ## License
-MIT 
+Book_review
