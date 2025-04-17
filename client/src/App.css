@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global Styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Book Card Styles */
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.book-image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-image-container img {
+  transform: scale(1.05);
+}
+
+.book-description {
+  height: 80px;
+  overflow: hidden;
+}
+
+/* Rating Component */
+.rating {
+  cursor: pointer;
+}
+
+.rating span {
+  margin: 0 1px;
+}
+
+/* Book Detail Page */
+.book-detail-image {
+  max-height: 500px;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-control:focus {
+  border-color: #6c757d;
+  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('https://via.placeholder.com/1200x400?text=Book+Review');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* Book Carousel */
+.book-carousel .carousel-control-prev-icon,
+.book-carousel .carousel-control-next-icon {
+  background-color: #6c757d;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.book-carousel .carousel-item {
+  padding: 1rem 0;
+}
+
+.carousel-card-container {
+  height: 100%;
+  min-height: 520px;
+}
+
+/* Book Card Responsive Height Adjustments */
+@media (max-width: 768px) {
+  .book-image-container {
+    height: 240px;
+  }
+}
+
+@media (max-width: 576px) {
+  .book-image-container {
+    height: 280px;
+  }
+}
+
+/* Ensure grid consistency */
+.row-cols-1 > .col,
+.row-cols-sm-2 > .col,
+.row-cols-md-3 > .col,
+.row-cols-lg-4 > .col {
+  margin-bottom: 1.5rem;
+}
